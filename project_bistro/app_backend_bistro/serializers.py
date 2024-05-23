@@ -4,13 +4,13 @@ from .models import *
 class MenuItemSerializer(serializers.ModelSerializer):
     class Meta:
         model = MenuItem
-        fields = ['id', 'cuisine', 'title', 'category', 'price']
+        fields = ['id', 'cuisine', 'title', 'category', 'description', 'price']
 
 
 class CustomerSerializer(serializers.ModelSerializer):
     class Meta:
         model = Customer
-        fields = []
+        fields = ['id', 'name']
 
 class OrderSerializer(serializers.ModelSerializer):
     class Meta:
@@ -25,11 +25,11 @@ class OrderItemSerializer(serializers.ModelSerializer):
 class DriverSerializer(serializers.ModelSerializer):
     class Meta:
         model = Customer
-        fields = []
+        fields = ['id', 'name', 'phone_number', 'license_plate_number']
 
 
 class ReviewSerializer(serializers.ModelSerializer):
     class Meta:
         model = Customer
-        fields = []
+        fields = ['id', 'name', 'driver_name', 'rating', 'comments', 'created_at']
         

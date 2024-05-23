@@ -23,7 +23,7 @@ class MenuItem(models.Model):
 
     cuisine = models.CharField(choices=cuisine_choices, max_length=200, default='Italian')
     title = models.CharField(max_length=200)
-    # description = models.TextField() 
+    description = models.TextField() 
     category = models.CharField(choices=category_choices, max_length=200, default='Drink')
     price = models.DecimalField(max_digits=6, decimal_places=2)
     # img

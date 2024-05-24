@@ -24,12 +24,12 @@ class OrderItemSerializer(serializers.ModelSerializer):
 
 class DriverSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Customer
-        fields = ['id', 'name', 'phone_number', 'license_plate_number']
+        model = Driver
+        fields = ['id', 'name', 'phone_number', 'vehicle_make', 'license_plate_number']
 
 
 class ReviewSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Customer
-        fields = ['id', 'name', 'driver_name', 'rating', 'comments', 'created_at']
+        model = Review
+        fields = ['id', 'customer', 'driver', 'rating', 'comment', 'created_at']
         

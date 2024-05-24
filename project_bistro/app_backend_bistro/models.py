@@ -9,7 +9,7 @@ class MenuItem(models.Model):
         ('Southern', 'Southern'),
         ('American', 'American'),
         ('Asian', 'Asian'),
-        ('Mediterranean', 'Mediaterranea'),
+        ('Mediterranean', 'Mediaterranean'),
         ('International', 'International')
     ] # need to put my cusines types
 
@@ -70,7 +70,8 @@ class OrderItem(models.Model):
 class Driver(models.Model):
     name = models.CharField(max_length=200)
     phone_number = models.CharField(max_length=12)
-    license_number = models.CharField(max_length=10)
+    vehicle_make = models.CharField(max_length=30)
+    license_plate_number = models.CharField(max_length=10)
 
 
     def __str__(self):
